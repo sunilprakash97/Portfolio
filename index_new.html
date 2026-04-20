@@ -3,10 +3,10 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Sunilprakash Jaisankar — Full-Stack Developer with 4+ years building scalable products. Java, Spring Boot, Kafka, Azure. Backend engineering and microservices.">
+<meta name="description" content="Sunilprakash Jaisankar — Full-Stack Developer with 5+ years building scalable products. Java, Spring Boot, Kafka, Azure. Backend engineering and microservices.">
 <meta name="theme-color" content="#f8f8f6">
 <meta property="og:title" content="Sunilprakash Jaisankar — Full-Stack Developer">
-<meta property="og:description" content="Full-Stack Developer with 4+ years designing scalable products. Strong backend background: Java, Spring Boot, SQL Server, Kafka, Azure. MEng from McMaster University.">
+<meta property="og:description" content="Full-Stack Developer with 5+ years designing scalable products. Strong backend background: Java, Spring Boot, SQL Server, Kafka, Azure. MEng from McMaster University.">
 <meta property="og:type" content="website">
 <title>Sunilprakash Jaisankar — Full-Stack Developer</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -67,7 +67,7 @@
   .btn-secondary:hover { background: var(--gray-50); transform: translateY(-1px); }
 
   .section { padding: 3rem 2.5rem; border-top: 0.5px solid var(--border); }
-  .section-label { font-size: 11px; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; color: var(--text-faint); margin-bottom: 1.5rem; }
+  .section-label { font-family: 'DM Serif Display', serif; font-size: clamp(22px, 2.6vw, 30px); font-weight: 400; letter-spacing: -0.02em; line-height: 1.15; color: var(--text); margin: 0 0 1.35rem; padding-left: 1rem; border-left: 3px solid var(--purple-400); text-transform: none; }
 
   .exp-stack { display: flex; flex-direction: column; gap: 20px; }
 
@@ -77,6 +77,9 @@
   .exp-showcase:hover::before { opacity: 1; }
   .exp-showcase.accent-purple { --accent-gradient: linear-gradient(90deg, var(--purple-400), var(--purple-600)); }
   .exp-showcase.accent-teal { --accent-gradient: linear-gradient(90deg, #4DB6AC, var(--teal-600)); }
+  .exp-showcase.accent-amber { --accent-gradient: linear-gradient(90deg, #FFB74D, var(--amber-600)); }
+  .exp-showcase.accent-amber .exp-company { color: var(--amber-600); }
+  .exp-showcase.accent-amber .exp-bullets li::before { background: #FFB74D; }
 
   .exp-showcase-header { display: flex; justify-content: space-between; align-items: flex-start; gap: 1rem; margin-bottom: 6px; }
   .exp-showcase-header .project-eyebrow { margin-bottom: 8px; }
@@ -149,12 +152,14 @@
   .tech-chip { font-size: 11px; padding: 3px 10px; border-radius: 100px; border: 0.5px solid var(--border-md); color: var(--text-muted); background: var(--bg); transition: background 0.15s, color 0.15s; }
   .tech-chip:hover { background: var(--purple-50); color: var(--purple-800); border-color: var(--purple-100); }
 
-  .skills-block { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; }
-  .skills-row { display: flex; flex-direction: column; gap: 10px; padding: 0.95rem 1rem; border-radius: var(--radius-lg); border: 0.5px solid var(--border); background: var(--bg-surface); }
-  .skills-row-label { font-size: 11px; font-weight: 600; color: var(--text-faint); letter-spacing: 0.07em; text-transform: uppercase; min-width: unset; padding-top: 0; flex-shrink: 0; }
-  .skills-chips { display: flex; flex-wrap: wrap; gap: 9px; }
-  .skill-chip { font-size: 12px; padding: 5px 12px; border-radius: 999px; border: 0.5px solid var(--border); color: var(--text-muted); background: var(--bg); transition: all 0.2s; }
-  .skill-chip:hover { background: var(--purple-50); color: var(--purple-800); border-color: var(--purple-100); transform: translateY(-1px); }
+  .skills-panel { background: var(--bg-surface); border: 0.5px solid var(--border); border-radius: var(--radius-lg); padding: 0 1.35rem; max-width: 100%; }
+  .skills-block { display: flex; flex-direction: column; }
+  .skills-row { display: flex; flex-direction: row; align-items: flex-start; gap: 1.25rem 2rem; padding: 0.95rem 0; border-bottom: 0.5px solid var(--border); }
+  .skills-row:last-child { border-bottom: none; }
+  .skills-row-label { font-size: 13px; font-weight: 600; color: var(--text); letter-spacing: -0.01em; min-width: 168px; padding-top: 3px; flex-shrink: 0; line-height: 1.4; }
+  .skills-chips { display: flex; flex-wrap: wrap; gap: 7px 10px; flex: 1; min-width: 0; }
+  .skill-chip { font-size: 12px; padding: 5px 11px; border-radius: 6px; border: none; color: var(--text-muted); background: var(--gray-50); transition: background 0.15s, color 0.15s; }
+  .skill-chip:hover { background: var(--purple-50); color: var(--purple-800); }
 
   .edu-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 14px; }
   .edu-card { background: var(--bg-surface); border: 0.5px solid var(--border); border-radius: var(--radius-lg); padding: 1.25rem; transition: transform 0.2s, box-shadow 0.2s; }
@@ -188,8 +193,8 @@
     .exp-inner { grid-template-columns: 1fr; }
     .exp-showcase-header { flex-direction: column; }
     .exp-period { text-align: left; padding-top: 0; white-space: normal; }
-    .skills-block { grid-template-columns: 1fr; }
-    .skills-row { gap: 8px; }
+    .skills-panel { padding-left: 1rem; padding-right: 1rem; }
+    .skills-row { flex-direction: column; gap: 0.5rem; padding: 0.85rem 0; }
     .skills-row-label { min-width: unset; padding-top: 0; }
     .edu-grid { grid-template-columns: 1fr; }
     footer { padding-left: 1.25rem; padding-right: 1.25rem; }
@@ -200,7 +205,7 @@
     header, .skip-link, .btn-row, .nav-toggle, .hero-glow { display: none; }
     .hero { padding-top: 1rem; }
     .section { border-top: 1px solid #ccc; padding: 1.5rem 0; }
-    .project-showcase, .exp-showcase, .edu-card, .stat-card, .impact-card { border: 1px solid #ddd; box-shadow: none; transform: none; }
+    .project-showcase, .exp-showcase, .edu-card, .stat-card, .impact-card, .skills-panel { border: 1px solid #ddd; box-shadow: none; transform: none; }
     .exp-showcase::before, .project-showcase::before { display: none; }
     .reveal { opacity: 1; transform: none; }
     a[href]::after { content: " (" attr(href) ")"; font-size: 10px; color: #666; }
@@ -234,7 +239,7 @@
     <div class="hero-glow" aria-hidden="true"></div>
     <div class="avatar" aria-hidden="true">SJ</div>
     <h1><em>Full-Stack Developer</em> building scalable products &amp; platforms</h1>
-    <p class="tagline"><strong>Full-Stack Developer</strong> with <strong>4+ years</strong> of experience designing and delivering <strong>scalable products</strong>, with a strong background in <strong>backend engineering</strong> using <strong>Java, Spring Boot, Spring WebFlux, SQL Server, Kafka, and Azure</strong>. Expert in <strong>microservices architecture</strong>, <strong>REST API design</strong>, <strong>database optimization</strong>, <strong>event-driven systems</strong>, and <strong>CI/CD pipeline automation</strong>. Proven track record of reducing <strong>technical debt</strong>, improving <strong>query performance</strong> by orders of magnitude, and delivering <strong>high-availability platforms</strong> across enterprise retail environments.</p>
+    <p class="tagline"><strong>Full-Stack Developer</strong> with <strong>5+ years</strong> of experience designing and delivering <strong>scalable products</strong>, with a strong background in <strong>backend engineering</strong> using <strong>Java, Spring Boot, Spring WebFlux, SQL Server, Kafka, and Azure</strong>. Expert in <strong>microservices architecture</strong>, <strong>REST API design</strong>, <strong>database optimization</strong>, <strong>event-driven systems</strong>, and <strong>CI/CD pipeline automation</strong>. Proven track record of reducing <strong>technical debt</strong>, improving <strong>query performance</strong> by orders of magnitude, and delivering <strong>high-availability platforms</strong> across enterprise retail environments.</p>
     <div class="hero-meta">
       <span>Chennai, Tamil Nadu, India</span>
       <span><a href="tel:+919600037338">+91 96000 37338</a></span>
@@ -257,7 +262,7 @@
   </div>
 
   <section class="section" id="experience" aria-label="Professional experience">
-    <div class="section-label">Professional experience</div>
+    <h2 class="section-label">Professional experience</h2>
     <div class="exp-stack">
 
       <div class="exp-showcase accent-purple reveal">
@@ -265,7 +270,7 @@
           <div>
             <div class="project-eyebrow">
               <span class="project-type-badge badge-featured">Recent role</span>
-              <span class="project-context">Full-time &middot; 4+ years experience</span>
+              <span class="project-context">Full-time &middot; 5+ years experience</span>
             </div>
             <div class="exp-company">Sobeys Inc.</div>
             <div class="exp-role">Backend Developer</div>
@@ -439,11 +444,73 @@
         </div>
       </div>
 
+      <div class="exp-showcase accent-amber reveal reveal-delay-2">
+        <div class="exp-showcase-header">
+          <div>
+            <div class="project-eyebrow">
+              <span class="project-type-badge badge-featured" style="background:var(--amber-50);color:var(--amber-800);border-color:var(--amber-100);">Co-op</span>
+              <span class="project-context">Two work terms</span>
+            </div>
+            <div class="exp-company">McMaster University</div>
+            <div class="exp-role">Full Stack Developer</div>
+          </div>
+          <div class="exp-period">Jan 2020 &ndash; May 2020<br>Sep 2020 &ndash; Mar 2021<br>Hamilton, Ontario, Canada</div>
+        </div>
+        <p class="exp-desc">Co-op on legacy internal web properties (server-rendered pages, forms, and relational reporting), delivered with a waterfall plan—tracked in Jira, reported weekly in Excel, and gated with GitHub Actions on shared branches.</p>
+        <div class="exp-inner">
+          <div>
+            <div class="exp-tech" style="margin-top:0;">
+              <span class="tech-chip">HTML</span>
+              <span class="tech-chip">CSS</span>
+              <span class="tech-chip">JavaScript</span>
+              <span class="tech-chip">PHP</span>
+              <span class="tech-chip">MySQL</span>
+              <span class="tech-chip">Git</span>
+              <span class="tech-chip">GitHub Actions</span>
+              <span class="tech-chip">Jira</span>
+              <span class="tech-chip">Microsoft Excel</span>
+            </div>
+            <ul class="exp-bullets">
+              <li>Led phased revamps of three internal properties: the engineering department portal, the research administration site, and the campus facilities service hub—refreshing layouts, navigation, and forms while preserving critical workflows.</li>
+              <li>Stabilized legacy server-rendered pages by untangling inline styling, consolidating repeated markup patterns, and tightening cross-browser behaviour.</li>
+              <li>Hardened form submissions and data access paths with validation and safer query patterns to cut production errors and keep reporting dependable.</li>
+              <li>Ran waterfall-style delivery with sequenced requirements, build, and regression gates—using issue tracking for backlog hygiene, defects, and milestone sign-offs with faculty and staff.</li>
+              <li>Prepared weekly supervisor report packs for scope, risks, test readiness, and release status; added CI workflows on shared branches for lightweight checks ahead of merges.</li>
+            </ul>
+          </div>
+          <div class="project-right">
+            <div class="project-stat-grid">
+              <div class="stat-card">
+                <div class="stat-label">Sites revamped</div>
+                <div class="stat-value">3</div>
+              </div>
+              <div class="stat-card">
+                <div class="stat-label">Work terms</div>
+                <div class="stat-value">2</div>
+              </div>
+              <div class="stat-card">
+                <div class="stat-label">Methodology</div>
+                <div class="stat-value">Waterfall</div>
+              </div>
+              <div class="stat-card">
+                <div class="stat-label">Reporting</div>
+                <div class="stat-value">Weekly status</div>
+              </div>
+            </div>
+            <div class="card-tech" style="margin-top:0;">
+              <span class="tech-chip">Legacy codebase</span>
+              <span class="tech-chip">Content migration</span>
+              <span class="tech-chip">Regression testing</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
     </div>
   </section>
 
   <section class="section" id="projects" aria-label="Selected projects">
-    <div class="section-label">Selected projects</div>
+    <h2 class="section-label">Selected projects</h2>
     <div class="projects-stack">
 
       <div class="project-showcase accent-purple reveal">
@@ -598,7 +665,8 @@
   </section>
 
   <section class="section reveal" id="skills" aria-label="Technical skills">
-    <div class="section-label">Technical skills</div>
+    <h2 class="section-label">Technical skills</h2>
+    <div class="skills-panel">
     <div class="skills-block">
       <div class="skills-row">
         <span class="skills-row-label">Languages</span>
@@ -661,10 +729,11 @@
         </div>
       </div>
     </div>
+    </div>
   </section>
 
   <section class="section reveal" id="education" aria-label="Education">
-    <div class="section-label">Education</div>
+    <h2 class="section-label">Education</h2>
     <div class="edu-grid">
       <div class="edu-card">
         <div class="edu-degree">Master of Engineering</div>
@@ -684,7 +753,7 @@
   </section>
 
   <section class="section reveal" id="contact" aria-label="Contact information">
-    <div class="section-label">Contact</div>
+    <h2 class="section-label">Contact</h2>
     <div class="contact-row">
       <a class="contact-link" href="mailto:mr.sunilprakashj@gmail.com">mr.sunilprakashj@gmail.com</a>
       <a class="contact-link" href="tel:+919600037338">+91 96000 37338</a>
