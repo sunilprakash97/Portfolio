@@ -6,7 +6,7 @@
 <meta name="description" content="Sunilprakash Jaisankar — Full-stack software engineer specialising in distributed systems, event-driven architectures, and cloud-native deployments. Java, Spring Boot, Kafka, Docker, Kubernetes.">
 <meta name="theme-color" content="#f8f8f6">
 <meta property="og:title" content="Sunilprakash Jaisankar — Software Engineer">
-<meta property="og:description" content="Full-stack engineer building scalable backend systems & platforms. MEng from McMaster University. Currently at Sobeys, Canada.">
+<meta property="og:description" content="Full-stack engineer building scalable backend systems &amp; platforms. MEng from McMaster University. Currently at Sobeys, Canada.">
 <meta property="og:type" content="website">
 <title>Sunilprakash Jaisankar — Software Engineer</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -154,10 +154,10 @@
 
   .skills-panel { background: var(--bg-surface); border: 0.5px solid var(--border); border-radius: var(--radius-lg); padding: 0 1.35rem; max-width: 100%; }
   .skills-block { display: flex; flex-direction: column; }
-  .skills-row { display: flex; flex-direction: row; align-items: flex-start; justify-content: space-between; gap: 1.25rem 2rem; padding: 0.95rem 0; border-bottom: 0.5px solid var(--border); }
+  .skills-row { display: flex; flex-direction: row; align-items: flex-start; gap: 1.25rem 2rem; padding: 0.95rem 0; border-bottom: 0.5px solid var(--border); }
   .skills-row:last-child { border-bottom: none; }
   .skills-row-label { font-size: 13px; font-weight: 600; color: var(--text); letter-spacing: -0.01em; min-width: 168px; padding-top: 3px; flex-shrink: 0; line-height: 1.4; }
-  .skills-chips { display: flex; flex-wrap: wrap; justify-content: flex-end; gap: 7px 10px; flex: 1; min-width: 0; }
+  .skills-chips { display: flex; flex-wrap: wrap; gap: 7px 10px; flex: 1; min-width: 0; }
   .skill-chip { font-size: 12px; padding: 5px 11px; border-radius: 6px; border: none; color: var(--text-muted); background: var(--gray-50); transition: background 0.15s, color 0.15s; }
   .skill-chip:hover { background: var(--purple-50); color: var(--purple-800); }
 
@@ -194,9 +194,8 @@
     .exp-showcase-header { flex-direction: column; }
     .exp-period { text-align: left; padding-top: 0; white-space: normal; }
     .skills-panel { padding-left: 1rem; padding-right: 1rem; }
-    .skills-row { flex-direction: column; align-items: stretch; gap: 0.5rem; padding: 0.85rem 0; }
+    .skills-row { flex-direction: column; gap: 0.5rem; padding: 0.85rem 0; }
     .skills-row-label { min-width: unset; padding-top: 0; }
-    .skills-chips { width: 100%; justify-content: flex-end; }
     .edu-grid { grid-template-columns: 1fr; }
     footer { padding-left: 1.25rem; padding-right: 1.25rem; }
   }
@@ -259,12 +258,9 @@
     </div>
   </div>
 
-  <!-- EXPERIENCE -->
   <section class="section" id="experience" aria-label="Work experience">
     <h2 class="section-label">Professional experience</h2>
     <div class="exp-stack">
-
-      <!-- Sobeys -->
       <div class="exp-showcase accent-purple reveal">
         <div class="exp-showcase-header">
           <div>
@@ -281,14 +277,6 @@
 
         <div class="exp-inner">
           <div>
-            <div class="exp-tech" style="margin-top:0;">
-              <span class="tech-chip">Java</span>
-              <span class="tech-chip">Spring Boot</span>
-              <span class="tech-chip">SQL Server</span>
-              <span class="tech-chip">OpenText Media Mgmt</span>
-              <span class="tech-chip">SAP</span>
-              <span class="tech-chip">Azure</span>
-            </div>
             <ul class="exp-bullets">
               <li>Optimised SQL Server stored procedures powering executive dashboards &mdash; reduced reads by 98%, writes by 42%, and cut load time from 1 minute to 3 seconds.</li>
               <li>Migrated 80 TB of image and metadata assets into OTMM, enabling centralised discovery and search for the SMT team.</li>
@@ -318,6 +306,12 @@
               </div>
             </div>
             <div class="card-tech" style="margin-top:0;">
+              <span class="tech-chip">Java</span>
+              <span class="tech-chip">Spring Boot</span>
+              <span class="tech-chip">SQL Server</span>
+              <span class="tech-chip">OpenText Media Mgmt</span>
+              <span class="tech-chip">SAP</span>
+              <span class="tech-chip">Azure</span>
               <span class="tech-chip">REST APIs</span>
               <span class="tech-chip">SFTP</span>
               <span class="tech-chip">Azure DevOps</span>
@@ -326,8 +320,6 @@
             </div>
           </div>
         </div>
-
-        <!-- FleetPulse nested highlight -->
         <div class="exp-highlight">
           <div class="project-showcase accent-blue reveal">
             <div class="project-inner">
@@ -384,12 +376,9 @@
     </div>
   </section>
 
-  <!-- PROJECTS -->
   <section class="section" id="projects" aria-label="Selected projects">
-    <div class="section-label">Selected projects</div>
+    <h2 class="section-label">Selected projects</h2>
     <div class="projects-stack">
-
-      <!-- Gusto Kitchen -->
       <div class="project-showcase accent-purple reveal">
         <div class="project-inner">
           <div>
@@ -442,8 +431,6 @@
           </div>
         </div>
       </div>
-
-      <!-- MLOps Template -->
       <div class="project-showcase accent-teal reveal reveal-delay-1">
         <div class="project-inner">
           <div>
@@ -492,8 +479,6 @@
           </div>
         </div>
       </div>
-
-      <!-- Text Summariser -->
       <div class="project-showcase accent-amber reveal reveal-delay-2">
         <div class="project-inner">
           <div>
@@ -545,9 +530,9 @@
     </div>
   </section>
 
-  <!-- SKILLS -->
   <section class="section reveal" id="skills" aria-label="Technical skills">
-    <div class="section-label">Skills</div>
+    <h2 class="section-label">Skills</h2>
+    <div class="skills-panel">
     <div class="skills-block">
       <div class="skills-row">
         <span class="skills-row-label">Languages</span>
@@ -588,11 +573,11 @@
         </div>
       </div>
     </div>
+    </div>
   </section>
 
-  <!-- EDUCATION -->
   <section class="section reveal" id="education" aria-label="Education">
-    <div class="section-label">Education</div>
+    <h2 class="section-label">Education</h2>
     <div class="edu-grid">
       <div class="edu-card">
         <div class="edu-degree">Master of Engineering</div>
@@ -609,9 +594,8 @@
     </div>
   </section>
 
-  <!-- CONTACT -->
   <section class="section reveal" id="contact" aria-label="Contact information">
-    <div class="section-label">Get in touch</div>
+    <h2 class="section-label">Get in touch</h2>
     <div class="contact-row">
       <a class="contact-link" href="mailto:mr.sunilprakashj@gmail.com">mr.sunilprakashj@gmail.com</a>
       <a class="contact-link" href="tel:+919600037338">+91 96000 37338</a>
