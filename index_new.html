@@ -154,10 +154,10 @@
 
   .skills-panel { background: var(--bg-surface); border: 0.5px solid var(--border); border-radius: var(--radius-lg); padding: 0 1.35rem; max-width: 100%; }
   .skills-block { display: flex; flex-direction: column; }
-  .skills-row { display: flex; flex-direction: row; align-items: flex-start; gap: 1.25rem 2rem; padding: 0.95rem 0; border-bottom: 0.5px solid var(--border); }
+  .skills-row { display: flex; flex-direction: row; align-items: flex-start; justify-content: space-between; gap: 1.25rem 2rem; padding: 0.95rem 0; border-bottom: 0.5px solid var(--border); }
   .skills-row:last-child { border-bottom: none; }
   .skills-row-label { font-size: 13px; font-weight: 600; color: var(--text); letter-spacing: -0.01em; min-width: 168px; padding-top: 3px; flex-shrink: 0; line-height: 1.4; }
-  .skills-chips { display: flex; flex-wrap: wrap; gap: 7px 10px; flex: 1; min-width: 0; }
+  .skills-chips { display: flex; flex-wrap: wrap; justify-content: flex-end; gap: 7px 10px; flex: 1; min-width: 0; }
   .skill-chip { font-size: 12px; padding: 5px 11px; border-radius: 6px; border: none; color: var(--text-muted); background: var(--gray-50); transition: background 0.15s, color 0.15s; }
   .skill-chip:hover { background: var(--purple-50); color: var(--purple-800); }
 
@@ -194,8 +194,9 @@
     .exp-showcase-header { flex-direction: column; }
     .exp-period { text-align: left; padding-top: 0; white-space: normal; }
     .skills-panel { padding-left: 1rem; padding-right: 1rem; }
-    .skills-row { flex-direction: column; gap: 0.5rem; padding: 0.85rem 0; }
+    .skills-row { flex-direction: column; align-items: stretch; gap: 0.5rem; padding: 0.85rem 0; }
     .skills-row-label { min-width: unset; padding-top: 0; }
+    .skills-chips { width: 100%; justify-content: flex-end; }
     .edu-grid { grid-template-columns: 1fr; }
     footer { padding-left: 1.25rem; padding-right: 1.25rem; }
   }
@@ -277,20 +278,10 @@
           </div>
           <div class="exp-period">May 2023 &ndash; April 2026<br>Stellarton, NS, Canada</div>
         </div>
-        <p class="exp-desc">Backend development and platform delivery for enterprise retail: integrations, data pipelines, asset management, and high-availability releases.</p>
+        <p class="exp-desc">Backend development and platform delivery for Canada&rsquo;s second-largest grocery retailer: integrations, data pipelines, asset management, and high-availability releases.</p>
 
         <div class="exp-inner">
           <div>
-            <div class="exp-tech" style="margin-top:0;">
-              <span class="tech-chip">Java</span>
-              <span class="tech-chip">Spring Boot</span>
-              <span class="tech-chip">SQL Server</span>
-              <span class="tech-chip">Kafka Streams</span>
-              <span class="tech-chip">MQTT</span>
-              <span class="tech-chip">OpenText Media Management</span>
-              <span class="tech-chip">SAP</span>
-              <span class="tech-chip">Azure</span>
-            </div>
             <ul class="exp-bullets">
               <li>Tuned SQL Server stored procedures &mdash; 98% fewer reads, 42% fewer writes, reduced load time from 1 minute to 3 seconds.</li>
               <li>Designed and delivered REST API integration pipelines for partner onboarding, reducing cycle time by 70%.</li>
@@ -322,6 +313,14 @@
               </div>
             </div>
             <div class="card-tech" style="margin-top:0;">
+              <span class="tech-chip">Java</span>
+              <span class="tech-chip">Spring Boot</span>
+              <span class="tech-chip">SQL Server</span>
+              <span class="tech-chip">Kafka Streams</span>
+              <span class="tech-chip">MQTT</span>
+              <span class="tech-chip">OpenText Media Management</span>
+              <span class="tech-chip">SAP</span>
+              <span class="tech-chip">Azure</span>
               <span class="tech-chip">REST APIs</span>
               <span class="tech-chip">SFTP</span>
               <span class="tech-chip">Azure DevOps</span>
@@ -399,15 +398,6 @@
         <p class="exp-desc">End-to-end product delivery across React, Node.js, and PostgreSQL in an agile environment.</p>
         <div class="exp-inner">
           <div>
-            <div class="exp-tech" style="margin-top:0;">
-              <span class="tech-chip">TypeScript</span>
-              <span class="tech-chip">JavaScript</span>
-              <span class="tech-chip">React</span>
-              <span class="tech-chip">Node.js</span>
-              <span class="tech-chip">PostgreSQL</span>
-              <span class="tech-chip">Docker</span>
-              <span class="tech-chip">Git</span>
-            </div>
             <ul class="exp-bullets">
               <li>Delivered end-to-end full-stack features, translating product requirements into React UI workflows &amp; Node.js REST APIs.</li>
               <li>Built data-capture &amp; reporting services with input validation, error handling, and reusable business rules across modules.</li>
@@ -436,6 +426,13 @@
               </div>
             </div>
             <div class="card-tech" style="margin-top:0;">
+              <span class="tech-chip">TypeScript</span>
+              <span class="tech-chip">JavaScript</span>
+              <span class="tech-chip">React</span>
+              <span class="tech-chip">Node.js</span>
+              <span class="tech-chip">PostgreSQL</span>
+              <span class="tech-chip">Docker</span>
+              <span class="tech-chip">Git</span>
               <span class="tech-chip">REST APIs</span>
               <span class="tech-chip">Agile</span>
               <span class="tech-chip">Full-stack</span>
@@ -459,17 +456,6 @@
         <p class="exp-desc">Co-op on legacy internal web properties (server-rendered pages, forms, and relational reporting), delivered with a waterfall plan—tracked in Jira, reported weekly in Excel, and gated with GitHub Actions on shared branches.</p>
         <div class="exp-inner">
           <div>
-            <div class="exp-tech" style="margin-top:0;">
-              <span class="tech-chip">HTML</span>
-              <span class="tech-chip">CSS</span>
-              <span class="tech-chip">JavaScript</span>
-              <span class="tech-chip">PHP</span>
-              <span class="tech-chip">MySQL</span>
-              <span class="tech-chip">Git</span>
-              <span class="tech-chip">GitHub Actions</span>
-              <span class="tech-chip">Jira</span>
-              <span class="tech-chip">Microsoft Excel</span>
-            </div>
             <ul class="exp-bullets">
               <li>Led phased revamps of three internal properties: the engineering department portal, the research administration site, and the campus facilities service hub—refreshing layouts, navigation, and forms while preserving critical workflows.</li>
               <li>Stabilized legacy server-rendered pages by untangling inline styling, consolidating repeated markup patterns, and tightening cross-browser behaviour.</li>
@@ -498,6 +484,15 @@
               </div>
             </div>
             <div class="card-tech" style="margin-top:0;">
+              <span class="tech-chip">HTML</span>
+              <span class="tech-chip">CSS</span>
+              <span class="tech-chip">JavaScript</span>
+              <span class="tech-chip">PHP</span>
+              <span class="tech-chip">MySQL</span>
+              <span class="tech-chip">Git</span>
+              <span class="tech-chip">GitHub Actions</span>
+              <span class="tech-chip">Jira</span>
+              <span class="tech-chip">Microsoft Excel</span>
               <span class="tech-chip">Legacy codebase</span>
               <span class="tech-chip">Content migration</span>
               <span class="tech-chip">Regression testing</span>

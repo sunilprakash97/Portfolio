@@ -154,10 +154,10 @@
 
   .skills-panel { background: var(--bg-surface); border: 0.5px solid var(--border); border-radius: var(--radius-lg); padding: 0 1.35rem; max-width: 100%; }
   .skills-block { display: flex; flex-direction: column; }
-  .skills-row { display: flex; flex-direction: row; align-items: flex-start; gap: 1.25rem 2rem; padding: 0.95rem 0; border-bottom: 0.5px solid var(--border); }
+  .skills-row { display: flex; flex-direction: row; align-items: flex-start; justify-content: space-between; gap: 1.25rem 2rem; padding: 0.95rem 0; border-bottom: 0.5px solid var(--border); }
   .skills-row:last-child { border-bottom: none; }
   .skills-row-label { font-size: 13px; font-weight: 600; color: var(--text); letter-spacing: -0.01em; min-width: 168px; padding-top: 3px; flex-shrink: 0; line-height: 1.4; }
-  .skills-chips { display: flex; flex-wrap: wrap; gap: 7px 10px; flex: 1; min-width: 0; }
+  .skills-chips { display: flex; flex-wrap: wrap; justify-content: flex-end; gap: 7px 10px; flex: 1; min-width: 0; }
   .skill-chip { font-size: 12px; padding: 5px 11px; border-radius: 6px; border: none; color: var(--text-muted); background: var(--gray-50); transition: background 0.15s, color 0.15s; }
   .skill-chip:hover { background: var(--purple-50); color: var(--purple-800); }
 
@@ -194,8 +194,9 @@
     .exp-showcase-header { flex-direction: column; }
     .exp-period { text-align: left; padding-top: 0; white-space: normal; }
     .skills-panel { padding-left: 1rem; padding-right: 1rem; }
-    .skills-row { flex-direction: column; gap: 0.5rem; padding: 0.85rem 0; }
+    .skills-row { flex-direction: column; align-items: stretch; gap: 0.5rem; padding: 0.85rem 0; }
     .skills-row-label { min-width: unset; padding-top: 0; }
+    .skills-chips { width: 100%; justify-content: flex-end; }
     .edu-grid { grid-template-columns: 1fr; }
     footer { padding-left: 1.25rem; padding-right: 1.25rem; }
   }
