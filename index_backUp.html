@@ -259,7 +259,7 @@
   </div>
 
   <section class="section" id="experience" aria-label="Work experience">
-    <h2 class="section-label">Work experience</h2>
+    <h2 class="section-label">Professional experience</h2>
     <div class="exp-stack">
       <div class="exp-showcase accent-purple reveal">
         <div class="exp-showcase-header">
@@ -277,14 +277,6 @@
 
         <div class="exp-inner">
           <div>
-            <div class="exp-tech" style="margin-top:0;">
-              <span class="tech-chip">Java</span>
-              <span class="tech-chip">Spring Boot</span>
-              <span class="tech-chip">SQL Server</span>
-              <span class="tech-chip">OpenText Media Mgmt</span>
-              <span class="tech-chip">SAP</span>
-              <span class="tech-chip">Azure</span>
-            </div>
             <ul class="exp-bullets">
               <li>Optimised SQL Server stored procedures powering executive dashboards &mdash; reduced reads by 98%, writes by 42%, and cut load time from 1 minute to 3 seconds.</li>
               <li>Migrated 80 TB of image and metadata assets into OTMM, enabling centralised discovery and search for the SMT team.</li>
@@ -314,6 +306,12 @@
               </div>
             </div>
             <div class="card-tech" style="margin-top:0;">
+              <span class="tech-chip">Java</span>
+              <span class="tech-chip">Spring Boot</span>
+              <span class="tech-chip">SQL Server</span>
+              <span class="tech-chip">OpenText Media Mgmt</span>
+              <span class="tech-chip">SAP</span>
+              <span class="tech-chip">Azure</span>
               <span class="tech-chip">REST APIs</span>
               <span class="tech-chip">SFTP</span>
               <span class="tech-chip">Azure DevOps</span>
@@ -333,35 +331,39 @@
                 <h3>FleetPulse &mdash; Real-Time Telemetry Platform</h3>
                 <p class="project-desc">Real-time ingestion platform for Sobeys' refrigerated fleet. Processes truck telemetry via MQTT and Kafka Streams, replacing batch reporting with live fleet visibility.</p>
                 <ul class="project-bullets">
-                  <li>Architected real-time ingestion via MQTT and Kafka Streams with strict per-vehicle message ordering, eliminating out-of-sequence data issues.</li>
-                  <li>Built streaming pipelines with validation, deduplication, and normalisation &mdash; delivering clean event streams that removed manual data reconciliation.</li>
-                  <li>Horizontally scalable architecture supporting 20+ vehicles from day one, ready to onboard future fleet additions.</li>
+                  <li>Built a reactive Spring WebFlux real-time telemetry platform for refrigerated-truck ingestion via MQTT &amp; Kafka.</li>
+                  <li>Engineered streaming pipelines with de-duplication, normalization, and alerting logic, serving a fleet of 20+ vehicles.</li>
+                  <li>Delivered MongoDB-backed persistence and Grafana dashboards for real-time fleet monitoring.</li>
+                  <li>Introduced anomaly-triggered alerts for temperature and route deviations, improving response time for operations teams.</li>
+                  <li>Hardened telemetry APIs with resilient error handling and retry patterns to maintain ingestion continuity during network disruptions.</li>
                 </ul>
               </div>
               <div class="project-right">
                 <div class="project-stat-grid">
                   <div class="stat-card">
-                    <div class="stat-label">Ingestion</div>
-                    <div class="stat-value">Real-time</div>
+                    <div class="stat-label">Stack</div>
+                    <div class="stat-value">Spring WebFlux</div>
                   </div>
                   <div class="stat-card">
-                    <div class="stat-label">Processing</div>
+                    <div class="stat-label">Streaming</div>
                     <div class="stat-value">Kafka Streams</div>
                   </div>
                   <div class="stat-card">
-                    <div class="stat-label">Scale</div>
+                    <div class="stat-label">Fleet</div>
                     <div class="stat-value">20+ vehicles</div>
                   </div>
                   <div class="stat-card">
-                    <div class="stat-label">Protocol</div>
-                    <div class="stat-value">MQTT</div>
+                    <div class="stat-label">Observability</div>
+                    <div class="stat-value">Grafana</div>
                   </div>
                 </div>
                 <div class="card-tech" style="margin-top:0;">
                   <span class="tech-chip">Java</span>
+                  <span class="tech-chip">Spring WebFlux</span>
                   <span class="tech-chip">MQTT</span>
                   <span class="tech-chip">Kafka Streams</span>
-                  <span class="tech-chip">SQL Server</span>
+                  <span class="tech-chip">MongoDB</span>
+                  <span class="tech-chip">Grafana</span>
                   <span class="tech-chip">Docker</span>
                 </div>
               </div>
