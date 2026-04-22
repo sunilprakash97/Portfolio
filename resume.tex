@@ -19,6 +19,7 @@
 \setstretch{0.94}
 \setlist[itemize]{leftmargin=1.1em, topsep=0pt, itemsep=0pt, parsep=0pt, partopsep=0pt, label={--}}
 
+% Tight section bands: padding before/after the rule only (match ~0.456ex web-style hr gaps).
 \newlength{\sectionrulegap}
 \setlength{\sectionrulegap}{1ex}
 \newlength{\sectioncontentgap}
@@ -56,7 +57,7 @@
 \resumesection{Technical Skills}
 \textbf{Languages:} Java, Python, Bash, TypeScript \\
 \textbf{Frameworks:} Spring Boot, Spring Security, Spring Data JPA, Vert.x, Django, Hibernate \\
-\textbf{Frontend:} Angular, React, Next.js, Tailwind CSS, HTML5  \\
+\textbf{Frontend:} React, Next.js, Tailwind CSS, HTML5  \\
 \textbf{Databases:} SQL Server, PostgreSQL, MongoDB, Redis, Elasticsearch \\
 \textbf{Messaging \& Streaming:} Apache Kafka, MQTT, RabbitMQ \\
 \textbf{Cloud \& DevOps:} Azure, GCP, Docker, Kubernetes, Jenkins, Git, GitHub, Linux, Grafana, Kibana \\
@@ -97,16 +98,6 @@
   \item Tech Stack: TypeScript, JavaScript, Angular, React, Node.js, REST APIs, PostgreSQL, Docker, Git.
 \end{itemize}
 \vspace{\sectioncontentgap}
-\job{McMaster University}{Jan 2020 -- May 2020, Sep 2020 -- Mar 2021}{Full Stack Developer (Co-op)}{Hamilton, Ontario, Canada}
-\begin{itemize}
-  \item Led phased revamps of three internal properties: engineering portal, research administration site, and facilities service hub while preserving critical workflows.
-  \item Stabilized legacy server-rendered pages by consolidating repeated markup patterns and improving cross-browser behavior.
-  \item Hardened form submissions and data-access paths with stronger validation and safer query patterns to reduce production issues.
-  \item Executed waterfall-style delivery with sequenced requirements, build, and regression gates, including milestone sign-offs with faculty and staff.
-  \item Prepared weekly supervisor reporting for scope, risk, testing readiness, and release status; introduced lightweight CI checks on shared branches.
-  \item Tech Stack: HTML, CSS, JavaScript, PHP, MySQL, Git, GitHub Actions, Jira, Excel.
-\end{itemize}
-\vspace{\sectioncontentgap}
 
 \resumesection{Project}
 \textbf{Gusto Kitchen -- Microservices Backend Platform} \hfill \underline{\href{https://gustokitchen.hopto.org/}{gustokitchen.hopto.org}}\\
@@ -126,27 +117,21 @@
 \end{itemize}
 \vspace{\sectioncontentgap}
 
-\textbf{MLOps Template -- Personal Project}\\
-\begin{itemize}
-  \item Automated ML lifecycle from data ingestion through model registry to deployment, with full reproducibility via DVC versioning.
-  \item Integrated MLflow for experiment tracking &mdash; comparing hyperparameters, metrics, and artefacts across runs.
-  \item VGG19 transfer-learning pipeline achieving high-accuracy image classification with minimal training data.
-  \item Django REST API serving real-time predictions with model hot-swapping from the MLflow registry.
-  \item Fully containerised with Docker for consistent environments across development, CI, and production.
-  \item Tech Stack: Python, MLflow, DVC, Docker, VGG19, Django, CI/CD.
-\end{itemize}
-\vspace{\sectioncontentgap}
+% \textbf{MLOps Template -- Personal Project}\\
+% \begin{itemize}
+%   \item Built a production-grade MLOps pipeline automating model training, tracking, versioning, and deployment.
+%   \item Developed Django REST API with model serving endpoints for real-time inference; containerized with Docker.
+%   \item Tech Stack: Python, MLflow, Airflow, DVC, Docker, Django, Git-Action.
+% \end{itemize}
+% \vspace{3.5pt}
 
-\textbf{Text Summarizer -- MEng Major Project}\\
-\begin{itemize}
-  \item Designed a custom Seq2Seq architecture with Bahdanau attention for context-aware abstractive summary generation.
-  \item Trained on 230 million Amazon product reviews &mdash; handling large-scale data preprocessing, tokenisation, and batching.
-  \item Achieved 72\% validation accuracy with a 30.8M-parameter network, demonstrating strong generalisation on unseen review data.
-  \item Implemented beam search decoding for higher-quality output over greedy approaches.
-  \item Full research pipeline from data exploration through model evaluation, documented as MEng project at McMaster University.
-  \item Tech Stack: Python, TensorFlow, Seq2Seq, LSTM, Attention, NLP.
-\end{itemize}
-\vspace{\sectioncontentgap}
+% \textbf{Text Summarizer -- MEng Major Project}\\
+% \begin{itemize}
+%   \item Engineered abstractive text summarization system using Seq2Seq LSTM encoder-decoder with attention mechanism.
+%   \item Trained a deep network of 30.8M-parameters in 230M Amazon reviews, achieving 72\% validation accuracy.
+%   \item Tech Stack: Python, TensorFlow, Seq2Seq, LSTM, Attention, NLP.
+% \end{itemize}
+% \vspace{3.5pt}
 
 \resumesection{Education}
 \textbf{McMaster University} \hfill \textit{Hamilton, Ontario, Canada}\\
