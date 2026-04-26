@@ -1,4 +1,3 @@
-
 \documentclass[9pt,letterpaper]{article}
 \usepackage[T1]{fontenc}
 \usepackage[utf8]{inputenc}
@@ -37,6 +36,7 @@
 
 \newcommand{\job}[5]{%
   \textbf{Company:} #1\\%
+  % Row: Role | Location | From | To. Wider columns for Role and Location (longer text); From/To stay narrow.
   \begin{tabularx}{\linewidth}{@{}>{\hsize=1.0\hsize\raggedright\arraybackslash}X>{\hsize=1.5\hsize\raggedright\arraybackslash}X>{\hsize=0.8\hsize\raggedright\arraybackslash}X>{\hsize=0.5\hsize\raggedright\arraybackslash}X@{}}
   \textbf{Role:} #2 &
   \textbf{Location:} #5 &
@@ -101,31 +101,23 @@
 \vspace{\sectioncontentgap}
 
 \resumesection{Additional Projects}
-\textbf{Project Name:} FleetPulse -- Sobeys Internal Project\\
+\textbf{Project Name:} FleetPulse -- Sobeys Internal Project \hfill \textit{Internal project}\\
 \begin{itemize}
-\item Built a reactive Spring WebFlux real-time telemetry platform for refrigerated-truck ingestion via MQTT \& Kafka.
-\item Engineered streaming pipelines with de-duplication, normalization, and alerting logic, serving a fleet of 20+ vehicles.
-\item Delivered MongoDB-backed persistence and Grafana dashboards for real-time fleet monitoring.
-\item Tech Stack: Java, Spring WebFlux, MQTT, Kafka Streams, MongoDB, Grafana, Docker.
+  \item Built a reactive Spring WebFlux real-time telemetry platform for refrigerated-truck ingestion via MQTT \& Kafka.
+  \item Engineered streaming pipelines with de-duplication, normalization, and alerting logic, serving a fleet of 20+ vehicles.
+  \item Delivered MongoDB-backed persistence and Grafana dashboards for real-time fleet monitoring.
+  \item Tech Stack: Java, Spring WebFlux, MQTT, Kafka Streams, MongoDB, Grafana, Docker.
 \end{itemize}
 \vspace{\sectioncontentgap}
 \textbf{Project Name:} Gusto Kitchen -- Microservices Backend Platform \hfill \underline{\href{https://gustokitchen.hopto.org/}{gustokitchen.hopto.org}}\\
 \begin{itemize}
-
-\item Built a responsive Next.js frontend with SSR, dynamic routing, and reusable Tailwind-based component architecture.
-\item Architected a Spring Boot microservices backend (identity, order, payment) behind a secure API gateway.
-\item Engineered event-driven order workflows using Kafka with Stripe webhook-based asynchronous payment processing.
-\item Implemented Saga-based transactional consistency across distributed services using Kafka event choreography.
-\item Deployed on GCP using Docker and Nginx reverse proxy; enforced CI/CD quality gates via Jenkins and SonarQube.
-  % \item Architected microservices backend with identity, order, and payment domains behind an API gateway.
-  % \item Engineered event-driven order workflows using Kafka with Stripe web-hook-based payment processing.
-  % \item Designed domain-isolated PostgreSQL schemas with Spring Data JPA; implemented Google OAuth for authentication.
-  % \item Deployed on GCP with Docker and Nginx reverse proxy; enforced CI/CD quality gates via Jenkins and SonarQube.
-  % \item Implemented transactional consistency across services using the Saga pattern with Kafka event choreography.
+  \item Built a responsive Next.js frontend with SSR, dynamic routing, and reusable Tailwind-based component architecture.
+  \item Architected a Spring Boot microservices backend (identity, order, payment) behind a secure API gateway.
+  \item Engineered event-driven order workflows using Kafka with Stripe webhook-based asynchronous payment processing.
+  \item Implemented Saga-based transactional consistency across distributed services using Kafka event choreography.
+  \item Deployed on GCP using Docker and Nginx reverse proxy; enforced CI/CD quality gates via Jenkins and SonarQube.
   \item Tech Stack: Next.js, TypeScript, Tailwind CSS, Spring Boot, Kafka, PostgreSQL, Docker, GCP.
 \end{itemize}
-
-
 \vspace{\sectioncontentgap}
 
 \resumesection{Education}
@@ -137,10 +129,7 @@
 \textbf{From:} 09/2021 \sep \textbf{To:} 11/2022 &
 \textbf{Location:} Hamilton, Ontario, Canada
 \end{tabularx}
-\vspace{8pt}
-% \noindent\rule{\linewidth}{0.35pt}
-
-
+\vspace{\sectioncontentgap}
 \begin{tabularx}{\linewidth}{@{}X X X@{}}
 \textbf{School:} SRM University &
 \textbf{Degree:} Bachelor of Engineering &
@@ -149,7 +138,4 @@
 \textbf{From:} 07/2015 \sep \textbf{To:} 05/2019 &
 \textbf{Location:} Chennai, Tamil Nadu, India
 \end{tabularx}
-
-
-
 \end{document}
