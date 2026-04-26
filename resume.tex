@@ -1,5 +1,4 @@
-% ATS / Workday-oriented layout: standard fonts, linear text, minimal decoration.
-% Body wording matches resume.tex; preamble and macros differ for parse safety.
+
 \documentclass[9pt,letterpaper]{article}
 \usepackage[T1]{fontenc}
 \usepackage[utf8]{inputenc}
@@ -8,6 +7,7 @@
 \usepackage[top=0.45in,bottom=0.45in,left=0.55in,right=0.55in]{geometry}
 \usepackage{enumitem}
 \usepackage{setspace}
+\usepackage{tabularx}
 \usepackage[hidelinks,pdfencoding=auto]{hyperref}
 
 \hypersetup{pdftitle={Resume - Sunilprakash Jaisankar},pdfauthor={Sunilprakash Jaisankar}}
@@ -16,14 +16,14 @@
 \raggedright
 \setlength{\parindent}{0pt}
 \setlength{\parskip}{0pt}
-\setstretch{0.94}
+\setstretch{0.92}
 \setlist[itemize]{leftmargin=1.1em, topsep=0pt, itemsep=0pt, parsep=0pt, partopsep=0pt, label={--}}
 
 % Tight section bands: padding before/after the rule only (match ~0.456ex web-style hr gaps).
 \newlength{\sectionrulegap}
-\setlength{\sectionrulegap}{1ex}
+\setlength{\sectionrulegap}{1.5ex}
 \newlength{\sectioncontentgap}
-\setlength{\sectioncontentgap}{2.8pt}
+\setlength{\sectioncontentgap}{1.5pt}
 
 \newcommand{\resumesection}[1]{%
   \par\vspace{\sectionrulegap}%
@@ -35,10 +35,15 @@
   \vspace{\sectionrulegap}%
 }
 
-\newcommand{\job}[4]{%
-  \textbf{#1} \hfill #2\\%
-  \textit{#3} \hfill \textit{#4}\par
-  \vspace{0pt}%
+\newcommand{\job}[5]{%
+  \textbf{Company:} #1\\%
+  \begin{tabularx}{\linewidth}{@{}>{\hsize=1.0\hsize\raggedright\arraybackslash}X>{\hsize=1.5\hsize\raggedright\arraybackslash}X>{\hsize=0.8\hsize\raggedright\arraybackslash}X>{\hsize=0.5\hsize\raggedright\arraybackslash}X@{}}
+  \textbf{Role:} #2 &
+  \textbf{Location:} #5 &
+  \textbf{From:} #3 &
+  \textbf{To:} #4
+  \end{tabularx}\par
+  \vspace{0.5pt}%
 }
 
 \newcommand{\sep}{ | }
@@ -46,7 +51,8 @@
 \begin{document}
 \begin{center}
 {\LARGE\textbf{Sunilprakash Jaisankar}}\\[3.5pt]
-{\small Chennai, Tamil Nadu, India \sep 91 96000 37338 \sep \href{mailto:mr.sunilprakashj@gmail.com}{mr.sunilprakashj@gmail.com} \sep \href{https://www.linkedin.com/in/sunilprakash-jaisankar/}{LinkedIn} \sep\href{https://portfolio-mu-kohl-yjbcqzs4dn.vercel.app/}{Portfolio}}
+{\small \textbf{City:} Chennai \sep \textbf{State:} Tamil Nadu \sep \textbf{Country:} India}\\
+{\small \textbf{Phone:} 9600037338 \sep \textbf{Email:} \href{mailto:mr.sunilprakashj@gmail.com}{mr.sunilprakashj@gmail.com} \sep \href{https://www.linkedin.com/in/sunilprakash-jaisankar/}{LinkedIn} \sep \href{https://portfolio-mu-kohl-yjbcqzs4dn.vercel.app/}{Portfolio}}
 \end{center}
 \vspace{-10pt}
 
@@ -55,19 +61,22 @@
 \vspace{\sectioncontentgap}
 
 \resumesection{Technical Skills}
-\textbf{Languages:} Java, Python, Bash, TypeScript \\
-\textbf{Frameworks:} Spring Boot, Spring Security, Spring Data JPA, Vert.x, Django, Hibernate \\
-\textbf{Frontend:} React, Next.js, Tailwind CSS, HTML5  \\
-\textbf{Databases:} SQL Server, PostgreSQL, MongoDB, Redis, Elasticsearch \\
-\textbf{Messaging \& Streaming:} Apache Kafka, MQTT, RabbitMQ \\
-\textbf{Cloud \& DevOps:} Azure, GCP, Docker, Kubernetes, Jenkins, Git, GitHub, Linux, Grafana, Kibana \\
-\textbf{Architecture:} Microservices, REST APIs, gRPC, Event-Driven Architecture, CQRS, CI/CD, SFTP \\
-\textbf{Testing \& Quality:} JUnit, Mockito, Integration Testing, SonarQube, Maven, Gradle \\
-\textbf{Platforms:} OpenText Media Management, SAP, Stripe, Nginx, MLflow, Airflow
+\noindent
+\begin{tabularx}{\linewidth}{@{}>{\raggedright\arraybackslash}p{3.6cm} X@{}}
+\textbf{Languages:} & Java, Python, Bash, TypeScript \\
+\textbf{Frameworks:} & Spring Boot, Spring WebFlux, Spring Security, Hibernate, Vert.x, Django, FastAPI \\
+\textbf{Frontend:} & Angular, React, Next.js, Tailwind, CSS, HTML5 \\
+\textbf{Databases:} & SQL Server, PostgreSQL, MongoDB, Redis, Elasticsearch \\
+\textbf{Messaging:} & Apache Kafka, MQTT, RabbitMQ \\
+\textbf{Cloud \& DevOps:} & Azure, GCP, Docker, Kubernetes, Jenkins, Git, GitHub, AWS, Linux, Grafana, Kibana \\
+\textbf{Architecture:} & Microservices, REST APIs, gRPC, Event-Driven Architecture, CQRS, CI/CD, SFTP \\
+\textbf{Testing \& Quality:} & JUnit, Mockito, Integration Testing, SonarQube, Maven, Gradle \\
+\textbf{Platforms:} & OpenText Media Management, SAP, Stripe, Nginx, MLflow, Airflow
+\end{tabularx}
 \vspace{\sectioncontentgap}
 
 \resumesection{Professional Experience}
-\job{Sobeys Inc.}{May 2023 -- April 2026}{Backend Developer}{Stellarton, NS, Canada}
+\job{Sobeys Inc.}{Backend Developer}{05/2023}{04/2026}{Stellarton, NS, Canada}
 \begin{itemize}
   \item Tuned SQL Server stored procedures - 98\% fewer reads, 42\% fewer writes, reduced load time from 1 minute to 3 seconds.
   \item Designed and delivered REST API integration pipelines for partner onboarding, reducing cycle time by 70\%.
@@ -80,15 +89,7 @@
   \item Tech Stack: Java, Spring Boot, SQL Server, Kafka Streams, MQTT, OpenText Media Management, SAP, Azure.
 \end{itemize}
 \vspace{\sectioncontentgap}
-\textbf{FleetPulse -- Real-Time Telemetry Platform} \hfill \textit{Internal Initiative at Sobeys}\\
-\begin{itemize}
-  \item Built a reactive Spring WebFlux real-time telemetry platform for refrigerated-truck ingestion via MQTT \& Kafka
-  \item Engineered streaming pipelines with de-duplication, normalization, and alerting logic, serving a fleet of 20+ vehicles.
-  \item Delivered MongoDB-backed persistence and Grafana dashboards for real-time fleet monitoring.
-  \item Tech Stack: Java, Spring WebFlux, MQTT, Kafka Streams, MongoDB, Grafana, Docker.
-\end{itemize}
-\vspace{\sectioncontentgap}
-\job{Weever}{Jun 2022 -- Apr 2023}{Full Stack Developer}{Hamilton, Ontario, Canada}
+\job{Weever}{Full Stack Developer}{06/2022}{04/2023}{Hamilton, Ontario, Canada}
 \begin{itemize}
   \item Delivered end-to-end features, translating requirements into Angular/React workflows \& high-performance Node.js APIs.
   \item Built data-capture and reporting services with validation, fault-tolerant error handling, and business logic across modules.
@@ -99,8 +100,16 @@
 \end{itemize}
 \vspace{\sectioncontentgap}
 
-\resumesection{Project}
-\textbf{Gusto Kitchen -- Microservices Backend Platform} \hfill \underline{\href{https://gustokitchen.hopto.org/}{gustokitchen.hopto.org}}\\
+\resumesection{Additional Projects}
+\textbf{Project Name:} FleetPulse -- Sobeys Internal Project\\
+\begin{itemize}
+\item Built a reactive Spring WebFlux real-time telemetry platform for refrigerated-truck ingestion via MQTT \& Kafka.
+\item Engineered streaming pipelines with de-duplication, normalization, and alerting logic, serving a fleet of 20+ vehicles.
+\item Delivered MongoDB-backed persistence and Grafana dashboards for real-time fleet monitoring.
+\item Tech Stack: Java, Spring WebFlux, MQTT, Kafka Streams, MongoDB, Grafana, Docker.
+\end{itemize}
+\vspace{\sectioncontentgap}
+\textbf{Project Name:} Gusto Kitchen -- Microservices Backend Platform \hfill \underline{\href{https://gustokitchen.hopto.org/}{gustokitchen.hopto.org}}\\
 \begin{itemize}
 
 \item Built a responsive Next.js frontend with SSR, dynamic routing, and reusable Tailwind-based component architecture.
@@ -115,32 +124,32 @@
   % \item Implemented transactional consistency across services using the Saga pattern with Kafka event choreography.
   \item Tech Stack: Next.js, TypeScript, Tailwind CSS, Spring Boot, Kafka, PostgreSQL, Docker, GCP.
 \end{itemize}
+
+
 \vspace{\sectioncontentgap}
-
-% \textbf{MLOps Template -- Personal Project}\\
-% \begin{itemize}
-%   \item Built a production-grade MLOps pipeline automating model training, tracking, versioning, and deployment.
-%   \item Developed Django REST API with model serving endpoints for real-time inference; containerized with Docker.
-%   \item Tech Stack: Python, MLflow, Airflow, DVC, Docker, Django, Git-Action.
-% \end{itemize}
-% \vspace{3.5pt}
-
-% \textbf{Text Summarizer -- MEng Major Project}\\
-% \begin{itemize}
-%   \item Engineered abstractive text summarization system using Seq2Seq LSTM encoder-decoder with attention mechanism.
-%   \item Trained a deep network of 30.8M-parameters in 230M Amazon reviews, achieving 72\% validation accuracy.
-%   \item Tech Stack: Python, TensorFlow, Seq2Seq, LSTM, Attention, NLP.
-% \end{itemize}
-% \vspace{3.5pt}
 
 \resumesection{Education}
-\textbf{McMaster University} \hfill \textit{Hamilton, Ontario, Canada}\\
-\textbf{Master of Engineering} in Systems \& Technology \hfill \textit{Sep 2021 -- Nov 2022}\\
-\textbf{Major:} Machine Learning and Neural Networks \hfill \text CGPA: 3.9/4.0
-\vspace{\sectioncontentgap}
+\begin{tabularx}{\linewidth}{@{}X X X@{}}
+\textbf{School:} McMaster University &
+\textbf{Degree:} Master of Engineering &
+\textbf{Field of Study:} Computer Science \\
+\textbf{GPA:} 3.9/4.0 &
+\textbf{From:} 09/2021 \sep \textbf{To:} 11/2022 &
+\textbf{Location:} Hamilton, Ontario, Canada
+\end{tabularx}
+\vspace{8pt}
+% \noindent\rule{\linewidth}{0.35pt}
 
-\textbf{SRM Institute of Science and Technology} \hfill \textit{Chennai, Tamil Nadu, India}\\
-\textbf{Bachelor of Engineering} in Computer Science \& Technology \hfill \textit{Jul 2015 -- May 2019}\\
-\textbf{Major:} Software Development \hfill \text CGPA: 3.1/4.0
+
+\begin{tabularx}{\linewidth}{@{}X X X@{}}
+\textbf{School:} SRM University &
+\textbf{Degree:} Bachelor of Engineering &
+\textbf{Field of Study:} Computer Science \\
+\textbf{GPA:} 3.1/4.0 &
+\textbf{From:} 07/2015 \sep \textbf{To:} 05/2019 &
+\textbf{Location:} Chennai, Tamil Nadu, India
+\end{tabularx}
+
+
 
 \end{document}
